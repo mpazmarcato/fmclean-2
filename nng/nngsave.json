@@ -284,11 +284,13 @@
     },
     {
       "lean": "theorem succ_succ_inj {a b : mynat} (h : succ(succ(a)) = succ(succ(b))) :  a = b := \n",
-      "editorText": "apply succ_inj,\r\napply succ_inj,\r\nexact h,"
+      "isSolved": true,
+      "editorText": "apply succ_inj,\r\napply succ_inj,\r\nexact h,\r\n"
     },
     {
       "lean": "theorem succ_eq_succ_of_eq {a b : mynat} : a = b → succ(a) = succ(b) :=\n",
-      "editorText": "sorry"
+      "isSolved": true,
+      "editorText": "intro h,\r\nrw h,\r\nrefl,\r\n"
     },
     {
       "lean": "theorem succ_eq_succ_iff (a b : mynat) : succ a = succ b ↔ a = b :=\n",
