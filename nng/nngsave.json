@@ -161,7 +161,8 @@
     },
     {
       "lean": "example (P Q F : Type) : (P → Q) → ((Q → F) → (P → F)) :=\n",
-      "editorText": "sorry"
+      "isSolved": true,
+      "editorText": "intros a b p,\r\nexact b(a(p)),"
     },
     {
       "lean": "example (P Q : Type) : (P → Q) → ((Q → empty) → (P → empty)) :=\n",
