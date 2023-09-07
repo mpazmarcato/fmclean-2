@@ -439,7 +439,8 @@
     },
     {
       "lean": "lemma lt_aux_two (a b : mynat) : succ a ≤ b → a ≤ b ∧ ¬ (b ≤ a) :=\n",
-      "editorText": "sorry"
+      "isSolved": true,
+      "editorText": "intro h,\r\nsplit,\r\nrw succ_eq_add_one at h,\r\ncases h with n h,\r\nrw h,\r\nuse 1+n,\r\nrw add_assoc,\r\nrefl,\r\nintro h1,\r\ncases h with n h,\r\nrw h at h1,\r\ncases h1 with m h1,\r\nrw succ_eq_add_one at h1,\r\nrw add_assoc at h1,\r\nrw add_assoc at h1,\r\nsymmetry at h1,\r\nhave h2 := eq_zero_of_add_right_eq_self (h1),\r\nrw ← add_assoc at h2,\r\nsymmetry at h2,\r\nrw add_comm at h2,\r\nrw add_comm 1 at h2,\r\nrw ← add_assoc at h2,\r\nrw ← succ_eq_add_one at h2,\r\nhave h3 := zero_ne_succ (m+n),\r\nexact h3(h2),\r\n"
     },
     {
       "lean": "lemma lt_iff_succ_le (a b : mynat) : a < b ↔ succ a ≤ b :=\n",
