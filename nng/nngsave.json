@@ -135,7 +135,7 @@
     {
       "lean": "lemma add_squared (a b : mynat) :\n  (a + b) ^ (2 : mynat) = a ^ (2 : mynat) + b ^ (2 : mynat) + 2 * a * b :=\n",
       "isSolved": true,
-      "editorText": "rw two_eq_succ_one,\r\nrw one_eq_succ_zero,\r\nrepeat {rw pow_succ},\r\nrepeat {rw pow_zero},\r\nrepeat {rw one_mul},\r\nrepeat {rw mul_add, rw add_mul},\r\nrepeat {rw succ_mul},\r\nrepeat {rw zero_mul},\r\nrw zero_add,\r\nrepeat {rw add_mul},\r\nsimp,\r\n"
+      "editorText": "rw two_eq_succ_one,\r\nrw one_eq_succ_zero,\r\nrepeat {rw pow_succ},\r\nrepeat {rw pow_zero},\r\nrepeat {rw one_mul},\r\nrepeat {rw mul_add, rw add_mul},\r\nrepeat {rw succ_mul},\r\nrepeat {rw zero_mul},\r\nrw zero_add,\r\nrepeat {rw add_mul},\r\nrw [add_comm (a * b) (b * b)],\r\nrw [mul_comm b a],\r\nrw [add_right_comm],\r\nrw [add_assoc],\r\nrw [add_assoc],\r\nrw [add_assoc],\r\nrefl,\r\n"
     },
     {
       "lean": "example (P Q : Type) (p : P) (h : P → Q) : Q :=\n",
